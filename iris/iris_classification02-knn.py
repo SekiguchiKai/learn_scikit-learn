@@ -36,5 +36,14 @@ print(knn)
 # 新しいirisのデータを作成し、予測してみる
 print("新しいirisのデータを作成し、予測してみる")
 # 新しいirisのデータをnimPyの配列として作成
+# 4つの特徴量
 X_new = np.array([[5, 2.9, 1, 0.2]])
 print("X_new.shape: {}".format(X_train.shape))
+
+# 予測を行う
+# knn.predictで予測を行う
+prediction = knn.predict(X_new)
+
+print("予測結果")
+print("Prediction: {}".format(prediction))
+print("Predicted target name: {}".format(iris_dataset['target_names'][prediction]))

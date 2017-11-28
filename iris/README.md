@@ -1,0 +1,1 @@
+[K近傍法(多クラス分類) - Qiita](https://qiita.com/yshi12/items/26771139672d40a0be32)
