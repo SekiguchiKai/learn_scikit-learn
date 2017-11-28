@@ -4,6 +4,8 @@ import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 
+print("基本的な流れは、\n1.データを準備する\n2.モデルを構築する\n3.予測を行う\n4.評価する")
+
 print("=====データを準備する======")
 # load_irisからirisのデータをロードし、変数に格納
 iris_dataset = load_iris()
@@ -53,3 +55,11 @@ print("Prediction: {}".format(prediction))
 print("Predicted target name: {}".format(iris_dataset['target_names'][prediction]))
 
 print("=====モデルの評価を行う======")
+
+# テストデータを元に、予測する
+y_pred = knn.predict(X_test)
+print("Test set predictions: \n{}".format(y_pred))
+
+# 予測の性能を評価する
+# 予測とテストデータが同じ場合=1、そうでない場合0で評価し、numpyのmeanでその平均値を取得する
+print("Test set score: \n{}".format(np.mean(y_pred == y_test)))
